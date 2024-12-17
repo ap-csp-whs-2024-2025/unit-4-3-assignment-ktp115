@@ -11,8 +11,8 @@ int main()
   int user_input;
   int num1;
   int num2;
-  int numerator;
-  int denominator;
+  double numerator;
+  double denominator;
   while (user_input != 99)
   {
     std::cout << "Welcome to C++ Calculator!  Choose an option below!\n"
@@ -61,8 +61,38 @@ int main()
             if (user_input==4)
             {
               std::cout << "Enter two numbers\n";
-              std::cin >> num1 >> num2;
-              std::cout << "The quotient is " << (num1/num2) << ".\n";
+              std::cin >> numerator >> denominator;
+              if (denominator==0)
+              {
+                std::cout << "ERROR. CANNOT DIVIDE BY ZERO.\n";
+              }
+              else
+              {
+                std::cout << "The quotient is " << (numerator/denominator) << ".\n";
+              }
+            }
+            else
+            {
+              if (user_input==5)
+              {
+                std::cout << "Enter a number\n";
+                std::cin >> num1;
+                if (num1 < 0)
+                {
+                  std::cout << "ERROR. CANNOT COMPUTE NEGATIVE NUMBER.";
+                }
+                else
+                {
+                  std::cout << "The square root is " << sqrt(num1) << ".\n";
+                }
+              }
+              else
+              {
+                if(user_input !=99)
+                {
+                  std::cout << "INVALID OPTION. CHOOSE AGAIN.\n";
+                }
+              }
             }
           }
         }
