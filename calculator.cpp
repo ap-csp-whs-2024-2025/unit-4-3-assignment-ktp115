@@ -8,7 +8,7 @@ int main()
 {
   std::srand(std::time(0));  // seeding our random number generator
 
-  int user_input = 0;
+  int user_input;
   int num1;
   int num2;
   int numerator;
@@ -38,7 +38,34 @@ int main()
       {
         std::cout << "Enter two numbers\n";
         std::cin >> num1 >> num2;
-        std::cout << "Their sum is " << (num1 + num2) << std::endl;
+        std::cout << "The sum is " << (num1 + num2) << ".\n";
+      }
+      else
+      {
+        if (user_input == 2)
+        {
+          std::cout << "Enter two numbers\n";
+          std::cin >> num1 >> num2;
+          std::cout << "The difference is " << (num1 - num2) << ".\n";
+        }
+        else
+        {
+          if (user_input==3)
+          {
+            std::cout << "Enter two numbers\n";
+            std::cin >> num1 >> num2;
+            std::cout << "The product is " << (num1*num2) << ".\n";
+          }
+          else
+          {
+            if (user_input==4)
+            {
+              std::cout << "Enter two numbers\n";
+              std::cin >> num1 >> num2;
+              std::cout << "The quotient is " << (num1/num2) << ".\n";
+            }
+          }
+        }
       }
     }
   }
