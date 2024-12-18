@@ -79,7 +79,7 @@ int main()
                 std::cin >> num1;
                 if (num1 < 0)
                 {
-                  std::cout << "ERROR. CANNOT COMPUTE NEGATIVE NUMBER.";
+                  std::cout << "ERROR. CANNOT COMPUTE NEGATIVE NUMBER.\n";
                 }
                 else
                 {
